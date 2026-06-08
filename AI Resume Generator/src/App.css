@@ -1,0 +1,259 @@
+.app-shell {
+  min-height: 100vh;
+  background: #0a1f44;
+  padding: 40px 20px;
+}
+
+.builder-card {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  padding: 32px;
+}
+
+.builder-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.builder-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.builder-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 440px) minmax(320px, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.resume-form {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.field-group {
+  display: grid;
+  gap: 8px;
+}
+
+.field-group label,
+.skills-fieldset legend {
+  color: #1e293b;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.field-group input,
+.field-group textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+  padding: 11px 12px;
+  resize: vertical;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+  outline: none;
+}
+
+.skills-fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.skills-fieldset legend {
+  margin-bottom: 10px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.skill-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 9px 10px;
+  border: 1px solid #dbe3ef;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+}
+
+.skill-option input {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563eb;
+}
+
+.download-button {
+  border: 0;
+  border-radius: 6px;
+  background: #0a1f44;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 13px 16px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.download-button:hover {
+  background: #12366f;
+}
+
+.download-button:active {
+  transform: translateY(1px);
+}
+
+.resume-preview-wrap {
+  overflow-x: auto;
+  padding: 4px;
+}
+
+.resume-paper {
+  width: min(100%, 760px);
+  min-height: 920px;
+  margin: 0 auto;
+  padding: 44px;
+  background: #ffffff;
+  border: 1px solid #d9e2ef;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.14);
+  color: #1f2937;
+}
+
+.resume-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  padding-bottom: 22px;
+  border-bottom: 3px solid #0a1f44;
+}
+
+.resume-top h2 {
+  margin: 0 0 8px;
+  color: #0a1f44;
+  font-size: 2.15rem;
+  line-height: 1.1;
+}
+
+.resume-top p,
+.resume-top a {
+  margin: 0;
+  color: #475569;
+  font-size: 0.98rem;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.resume-section {
+  padding: 22px 0 0;
+}
+
+.resume-section h3 {
+  margin: 0 0 10px;
+  color: #0a1f44;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-section p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.resume-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.resume-skills span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #0f3f82;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 5px 11px;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    padding: 24px 12px;
+  }
+
+  .builder-card {
+    padding: 20px;
+  }
+
+  .builder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-form {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-paper {
+    min-height: auto;
+    padding: 28px 22px;
+  }
+
+  .resume-top {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .resume-top h2 {
+    font-size: 1.75rem;
+  }
+}
